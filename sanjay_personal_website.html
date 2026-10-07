@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SANJAYLOVIE — Sanjay</title>
+<style>
+:root{
+  --bg:#fff;--ink:#0a0a0a;--muted:#666;--line:#ddd;--soft:#f5f5f5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1100px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-1px;font-size:22px}
+.links{display:flex;gap:24px;font-size:13px;font-weight:700}
+.links a:hover{text-decoration:underline}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 24px 70px;background:#000;color:#fff;text-align:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid #333;border-radius:50%;top:12%;left:50%;transform:translateX(-50%);opacity:.55}
+.hero-content{position:relative;z-index:1;max-width:850px}
+.kicker{font-size:12px;letter-spacing:5px;text-transform:uppercase;color:#aaa;margin-bottom:22px}
+h1{font-size:clamp(58px,12vw,130px);line-height:.9;letter-spacing:-7px;font-weight:900}
+.hero p{margin:30px auto 0;max-width:560px;color:#bbb;font-size:18px}
+.btns{margin-top:35px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 22px;border:1px solid #fff;font-weight:800;font-size:13px}
+.btn.light{background:#fff;color:#000}
+section{padding:100px 24px;max-width:1100px;margin:auto}
+.section-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#777;margin-bottom:12px}
+h2{font-size:clamp(36px,6vw,66px);letter-spacing:-3px;line-height:1;margin-bottom:30px}
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:70px}
+.about-text{font-size:22px;max-width:650px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{border:1px solid var(--line);padding:30px;min-height:190px;background:#fff;transition:.25s}
+.card:hover{background:#000;color:#fff;transform:translateY(-5px)}
+.card-number{font-size:12px;color:#888;margin-bottom:35px}
+.card h3{font-size:25px;margin-bottom:8px}
+.card p{color:#666}.card:hover p{color:#bbb}
+.quote{background:#000;color:#fff;max-width:none;margin:0;padding:100px max(24px,calc((100vw - 1100px)/2))}
+.quote p{font-size:clamp(30px,5vw,58px);line-height:1.05;letter-spacing:-2px;max-width:900px;font-weight:800}
+.quote small{display:block;margin-top:25px;color:#999;letter-spacing:2px}
+.poem{border-left:4px solid #000;padding:30px;background:#f5f5f5;font-size:22px;min-height:150px;color:#333}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.social{border:1px solid #111;padding:15px 22px;font-weight:800}
+.social:hover{background:#000;color:#fff}
+footer{border-top:1px solid var(--line);padding:35px 24px;text-align:center;color:#777;font-size:13px}
+@media(max-width:750px){
+ .links{display:none}.about{grid-template-columns:1fr;gap:25px}.card-grid{grid-template-columns:1fr}
+ h1{letter-spacing:-4px}.hero p{font-size:16px}
+ section{padding:75px 22px}
+}
+</style>
+
+<style>
+.life-history-section{background:#f7f7f7;color:#111}
+.life-timeline{max-width:850px;border-left:1px solid #111;margin-top:35px;padding-left:28px}
+.life-item{position:relative;padding:0 0 34px}
+.life-item:before{content:"";position:absolute;left:-34px;top:5px;width:10px;height:10px;background:#111;border-radius:50%}
+.life-year{font-size:.72rem;letter-spacing:.16em;font-weight:800}
+.life-item h3{margin:8px 0;font-size:1.35rem}
+.life-item p{margin:0;line-height:1.8;color:#555;max-width:700px}
+</style>
+
+
+<style>
+.poem-section{background:#111;color:#fff}
+.poem-card{max-width:780px;margin-top:30px;padding:34px;border:1px solid #555;line-height:1.9;font-size:1.05rem}
+.poem-card p{margin:0 0 26px}
+.poem-card .highlight{font-size:1.35rem;font-weight:800;letter-spacing:.04em}
+.poem-sign{text-align:right;font-weight:700;margin-top:35px}
+</style>
+
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#home">SANJAY.</a>
+    <div class="links">
+      <a href="#about">ABOUT</a><a href="#passion">PASSION</a><a href="#poetry">POETRY</a><a href="#connect">CONNECT</a>
+    </div>
+  </div>
+<a href="#my-story">My Story</a><a href="#life-history">My Life</a><a href="#kavithai">Kavithai</a></nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="kicker">Writer • Future Director • Cinema • Dreams</div>
+    <h1>SANJAY</h1>
+    <p>A writer with a love for cinema, dreaming of becoming a director and editor.</p>
+    <div class="btns">
+      <a class="btn light" href="#about">ENTER MY WORLD</a>
+      <a class="btn" href="#connect">CONNECT</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="about">
+    <div>
+      <div class="section-label">01 / About</div>
+      <h2>Who<br>am I?</h2>
+    </div>
+    <div class="about-text">
+      <p><strong>I'm Sanjay.</strong></p>
+      <p>I’m a writer who sees stories everywhere. Cinema is more than a hobby to me — it is the world I want to build my future in.</p>
+      <p style="margin-top:22px;color:#666">No love story here. Just stories, cinema, creativity and a dream that keeps moving.</p>
+    </div>
+  </div>
+</section>
+
+<section id="passion" style="padding-top:30px">
+  <div class="section-label">02 / My World</div>
+  <h2>Cinema is<br>my thing.</h2>
+  <div class="card-grid">
+    <article class="card"><div class="card-number">01</div><h3>Writing</h3><p>Creating ideas, characters and moments through words.</p></article>
+    <article class="card"><div class="card-number">02</div><h3>Future Direction</h3><p>A dream to bring my own stories to the screen.</p></article>
+    <article class="card"><div class="card-number">03</div><h3>Editing</h3><p>Shaping emotion and rhythm through the cut.</p></article>
+  </div>
+</section>
+
+<div class="quote">
+  <p>“Music is one of the feelings that makes cinema feel bigger.”</p>
+  <small>ANIRUDH SONGS • MY VIBE</small>
+</div>
+
+<section id="poetry">
+  <div class="section-label">03 / Kavithai</div>
+  <h2>Words<br>from me.</h2>
+  <div class="poem">“My kavithai will be added here…<br><br><span style="color:#888">— Sanjay</span></div>
+</section>
+
+
+<section id="life-history" class="section life-history-section">
+  <div class="section-head">
+    <span class="eyebrow">MY LIFE</span>
+    <h2>My Life History</h2>
+  </div>
+
+  <div class="life-timeline">
+    <article class="life-item">
+      <span class="life-year">2009</span>
+      <div>
+        <h3>The Beginning</h3>
+        <p>My story began on 30 July 2009. A normal beginning, but a life that would slowly grow around imagination, memories and big dreams.</p>
+      </div>
+    </article>
+
+    <article class="life-item">
+      <span class="life-year">CHILDHOOD</span>
+      <div>
+        <h3>Stories Started Growing</h3>
+        <p>As I grew up, I became more interested in cinema and the way stories could create emotions. I started imagining scenes, characters and moments in my own way.</p>
+      </div>
+    </article>
+
+    <article class="life-item">
+      <span class="life-year">THE DREAM</span>
+      <div>
+        <h3>Director</h3>
+        <p>One dream became clear: I want to become a director. Writing a scene is only the beginning for me; I want to learn how to bring that scene alive through camera, performance, editing and music.</p>
+      </div>
+    </article>
+
+    <article class="life-item">
+      <span class="life-year">NOW</span>
+      <div>
+        <h3>Writer • Editor • Creator</h3>
+        <p>Today, I keep learning by creating. Every short idea, edit, script and experiment becomes another step forward. I may still be at the starting line, but I know the direction I want to take.</p>
+      </div>
+    </article>
+
+    <article class="life-item">
+      <span class="life-year">FUTURE</span>
+      <div>
+        <h3>The Story Continues</h3>
+        <p>I don’t want my life to be remembered only by what I dreamed about. I want to build something from those dreams — one story, one frame and one project at a time.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="my-story" class="section story-section">
+  <div class="section-head">
+    <span class="eyebrow">MY STORY</span>
+    <h2>Stories from Sanjay’s life.</h2>
+  </div>
+
+  <div class="story-card">
+    <div class="story-meta">01 · LOVE STORY · 10 MIN READ</div>
+    <h3>My Love Story</h3>
+    <p>
+      A story that started in 4th standard — childhood feelings, a first confession,
+      rejection, misunderstandings, and an unfinished chapter that became part of my memories.
+    </p>
+    <a class="story-link" href="#love-story">Read My Love Story →</a>
+  </div>
+</section>
+
+<section id="love-story" class="section love-story-section">
+  <div class="section-head">
+    <span class="eyebrow">MY LOVE STORY</span>
+    <h2>A Story That Started in 4th Standard</h2>
+  </div>
+
+  <div class="story-content">
+    <p><strong>Some stories don’t begin with a big moment.</strong><br>They begin with a small feeling.</p>
+    <p>In 4th standard, I didn’t even know what love meant. But whenever I saw her, there was a special feeling. As the years passed, that feeling slowly grew.</p>
+    <p>I also had a dream from a young age — <strong>to become a director.</strong> Cinema was always close to my heart, but her place in my memories became special too.</p>
+    <p>In 9th standard, I gathered the courage to tell her how I felt. She told me that she saw me only as a good friend. It hurt, but slowly I learned to handle those feelings and move forward.</p>
+    <p>Later, a few conversations gave me hope again. But eventually I learned that she had feelings for someone else. That moment taught me that we can care deeply for someone, but we cannot control another person’s feelings.</p>
+    <p>There were more misunderstandings later, including a fake account created in her name that I did not create. I only wish that, one day, she understands that truth.</p>
+    <p>I don’t need her to accept my love. I don’t need her to come back. I only want the misunderstanding to be cleared.</p>
+    <p><strong>It isn’t a perfect love story. It isn’t a happy-ending story.</strong><br>It is simply a real chapter from my life.</p>
+    <p>And while that chapter remains unfinished, my own story continues — toward my dream of becoming a <strong>Director</strong>.</p>
+    <div class="story-sign">— Sanjay</div>
+  </div>
+</section>
+
+<section id="kavithai" class="section poem-section">
+  <div class="section-head">
+    <span class="eyebrow">MY KAVITHAI</span>
+    <h2>சஞ்சய்…</h2>
+  </div>
+
+  <div class="poem-card">
+    <p>சாதாரணமா வாழணும்னு<br>
+    விதி சொல்லிக்கொடுத்தாலும்,<br>
+    சாதிக்கணும்னு<br>
+    கனவு சொல்லிக்கொடுத்தவன் நீ…</p>
+
+    <p>கையில் camera இல்லாத நேரத்திலும்,<br>
+    மனசுக்குள்ள ஒரு frame ஓடும்…<br>
+    சுற்றி யாரும் பார்க்காத கதைகளையும்<br>
+    நீ மட்டும் பார்த்துவிடுவாய்.</p>
+
+    <p>சிலர் வாழ்க்கையை வாழ்கிறார்கள்,<br>
+    நீயோ அதை<br>
+    ஒரு கதையா எழுதிக்கொண்டிருக்கிறாய்…</p>
+
+    <p>விழுந்த நாட்களும் உண்டு,<br>
+    வருத்தப்பட்ட இரவுகளும் உண்டு,<br>
+    ஆனா ஒவ்வொரு முறையும்<br>
+    “இன்னும் முடிவில்லை…”<br>
+    என்று எழுந்து நிற்பவன் நீ.</p>
+
+    <p>உனக்கு cinema<br>
+    ஒரு வேலை இல்லை…<br>
+    அது உன் கனவுகளுக்கு<br>
+    குரல் கொடுக்கிற மொழி.</p>
+
+    <p>ஒருநாள்<br>
+    திரையில் ஒரு பெயர் வரும்…</p>
+
+    <p class="highlight">“A Film By Sanjay”</p>
+
+    <p>அந்த ஒரு வரிக்காக<br>
+    இன்று நீ கடந்து செல்லும்<br>
+    ஒவ்வொரு கஷ்டமும்<br>
+    நாளைக்கு ஒரு கதையாக மாறும்.</p>
+
+    <p>சஞ்சய் என்ற பெயர்<br>
+    ஒரு பெயர் மட்டும் இல்லை…<br>
+    விடாமல் கனவு காணும்<br>
+    ஒரு மனிதனின் கையொப்பம். 🎬✨</p>
+
+    <div class="poem-sign">— Sanjay</div>
+  </div>
+</section>
+
+<section id="connect">
+  <div class="section-label">04 / Connect</div>
+  <h2>Let's<br>connect.</h2>
+  <p style="max-width:600px;color:#666;margin-bottom:28px">Follow my journey, watch what I create, or say hi.</p>
+  <div class="socials">
+    <a class="social" href="https://www.instagram.com/Sanjay._dir" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+    <a class="social" href="https://wa.me/919486284268" target="_blank" rel="noopener">WHATSAPP ↗</a>
+  </div>
+</section>
+
+<footer>© 2026 SANJAYLOVIE · SANJAY</footer>
+</body>
+</html>
